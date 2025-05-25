@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slot Machine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>imple Slot Machine</h1>
+        <form method="POST">
+            <label>Number of lines to bet on (1 to {{ max_lines }}):</label>
+            <input type="number" name="lines" min="1" max="{{ max_lines }}" required>
+
+            <label>Bet per line ($):</label>
+            <input type="number" name="bet" min="1" required>
+
+            <button type="submit">Spin</button>
+        </form>
+    </div>
+</body>
+</html>

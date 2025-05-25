@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spin Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1> Spin Result</h1>
+
+        <h3>Your Spin:</h3>
+        <table>
+            {% for row in range(3) %}
+            <tr>
+                {% for col in slots %}
+                <td>{{ col[row] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+
+        <p><strong>Lines Played:</strong> {{ lines }}</p>
+        <p><strong>Bet per Line:</strong> ${{ bet }}</p>
+        <p><strong>Total Bet:</strong> ${{ total_bet }}</p>
+        <p><strong>Total Winnings:</strong> ${{ winnings }}</p>
+
+        {% if winning_lines %}
+        <p class="success">Winning Line(s): {{ winning_lines | join(", ") }}</p>
+        {% else %}
+        <p class="failure">No winning lines this time.</p>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}">Play Again</a>
+    </div>
+</body>
+</html>
