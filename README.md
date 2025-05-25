@@ -18,6 +18,7 @@ A simple and fun slot machine game built with Flask. Users can place bets on mul
 
 ![image](https://github.com/user-attachments/assets/16061e2e-748c-404d-b6d9-d83a4febe631)
 ![image](https://github.com/user-attachments/assets/c1656d0b-5282-4365-a109-2b676a7bd238)
+![image](https://github.com/user-attachments/assets/8a785e25-0b19-4692-8b3b-eed89b5cf74e)
 
 ---
 
